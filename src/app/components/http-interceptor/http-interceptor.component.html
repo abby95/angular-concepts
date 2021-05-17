@@ -1,0 +1,107 @@
+<div class="row justify-content-around">
+  <div class="col-1"></div>
+  <div class="col">
+    <div class="card ">
+      <div class="card-header bg-danger text-white"><b>What is Http-Interceptor in Angular?</b></div>
+      <div class="card-body">
+        As the name suggests, it is used to intercept outgoing http requests as well as incoming http response.
+        <hr>
+        <b>Few Use Cases:</b>
+
+        <ul>
+          <li>You can add Authorization Token while sending the http request</li>
+          <li>You can format or add your http request</li>
+        </ul>
+
+        <hr>
+
+      </div>
+    </div>
+
+    <hr>
+    <div class="card mt-3">
+      <div class="card-header bg-danger text-white"><b>How Have I implemented Http Interceptor in this Code?</b></div>
+      <div class="card-body">
+        <ul>
+          <li>I created an Http Injectable Class ===> Just like a service
+            <hr>
+            <img src="../../../assets/IMG/HttpInterceptor-1.png" alt="HTTP-INTERCEPTOR File">
+            <hr>
+          </li>
+
+          <li>Imported Http Interceptor from <b><i>@angular/common/http</i></b></li>
+          <li> You do <b class="text-danger">NOT</b> need a constructor in this file</li>
+          <li><b class="text-danger">You need a function named <i>intercept()</i> which takes in 2 arguments REQUEST and
+              NEXT HANDLER</b>
+            <hr>
+            <img src="../../../assets/IMG/HI-2.png" alt="HTTP-INTERCEPTOR File">
+            <hr>
+          </li>
+          <li>You can include this in your app.module.ts file under <b>Providers</b> and start using. But there is a
+            better way</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="card mt-3">
+      <div class="card-header bg-danger text-white"><b>THE BETTER WAY</b></div>
+
+      <div class="card-body">
+        <p>In real world projects, you will create multiple http-interceptors each doing a specific task</p>
+        <ul>
+          <li>
+            <p>There could be an Http-Interceptor that removes unwanted data from the http request</p>
+
+          </li>
+          <li>
+            <p>There could be an Http-Interceptor that Adds Authentication Token to the http request Headers</p>
+
+          </li>
+          <li>
+            <p> The <b class="text-danger">Better Way</b> is to create all these interceptor files and make a collection
+              of it in a seperate file
+              and
+              export this collection (its nothing but array of all the interceptors) </p>
+            <hr>
+            <img src="../../../assets/IMG/HI-3.png" alt="HTTP-INTERCEPTOR File">
+            <hr>
+          </li>
+
+          <li>Simply import this provider collections in your app.module.ts file
+
+            <hr>
+            <img src="../../../assets/IMG/HI-4.png" alt="HTTP-INTERCEPTOR File">
+            <hr>
+          </li>
+
+
+          <li>Simply include this provider collections in the Providers Array in your app.module.ts file
+
+            <hr>
+            <img src="../../../assets/IMG/HI-5.png" alt="HTTP-INTERCEPTOR File">
+            <hr>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="card ">
+      <div class="card-header bg-danger text-white"><b>What Should you observe?</b></div>
+      <div class="card-body">
+        Check the <b class="text-danger">NETWORKS</b> Tab in your Developers Console. Check the API Call thats being
+        made (in our case its <b class="text-danger">/users</b>)
+        <hr>
+        You will observe that that API Call (HTTP REQUEST) was intercepted by our <b
+          class="text-danger">AuthHeaderInterceptor</b> and it appended/added Auth Token to the Request Header
+        <hr>
+        <img src="../../../assets/IMG/HI-6.png" style="width:100%" alt="HTTP-INTERCEPTOR File">
+        <hr>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-1"> </div>
+
+  <hr>
+</div>

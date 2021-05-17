@@ -1,0 +1,15 @@
+<div class="ContentWrapper">
+  <div class="header">::: DATA EMITTER :::</div>
+  <div class="row">
+    <div class="col-8">
+      <div class="form-control">
+        <label for="data">Data to Emit</label>
+        <input type="text" name="data" id="data" [(ngModel)]="data">
+      </div>
+    </div>
+    <div class="col">
+      <button class="btn btn-block mt-5 btn-primary" (click)="emitData()">EMIT DATA</button>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,26 @@
+#navLink {
+  padding: 5px;
+  background-color: rgb(204, 204, 204);
+  margin-right: 10px;
+  font-weight: 800;
+  color: #7e7e7e;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.active {
+  font-weight: 800;
+  background-color: rgb(4, 105, 151) !important;
+  color: white !important;
+}
+
+.BrandName {
+  background-color: rgb(4, 105, 151);
+  font-weight: 800;
+  text-align: center;
+  color: white;
+  padding: 10px 5px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}

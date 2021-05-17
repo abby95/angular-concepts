@@ -1,0 +1,13 @@
+<section>
+  <div class="header">CHILD ONE</div>
+  <div class="inputOutputSection">
+    <div class="form-control">
+      <label for="name">Input From Parent</label>
+      <input type="text" name="name" [(ngModel)]="name" placeholder="Add Child One Name in Parent">
+    </div>
+  </div>
+
+  <button class="btn btn-danger mt-2 btn-block" (click)="EventEmitToParent()">
+    Send Data To Parent
+  </button>
+</section>

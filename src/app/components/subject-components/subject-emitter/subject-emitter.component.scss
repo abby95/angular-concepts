@@ -1,0 +1,21 @@
+.header {
+  text-align: center;
+  color: darkcyan;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.ContentWrapper {
+  background: rgba(0, 139, 139, 0.24);
+  padding: 10px;
+  border: 1px dashed darkcyan;
+  label {
+    color: rgb(1, 97, 97);
+  }
+}
+
+.btn-block {
+  background: darkcyan;
+  font-weight: 800;
+  border: none;
+}

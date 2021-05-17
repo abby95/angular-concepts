@@ -1,0 +1,60 @@
+<!-- <hr> -->
+
+<div class="row text-center" style="width: 98vw;">
+
+  <div class="col header">
+    PARENT
+  </div>
+  <div class="col" *ngIf="!showParentChildInterface">
+    <button class="btn btn-primary" (click)="showParentChildInterface=true;showSubjectInterface=false">
+      Show Parent Child Interface
+    </button>
+  </div>
+  <!-- <div class="col">
+    <button class="btn btn-success" (click)="showParentChildInterface=false;showSubjectInterface=true">
+      Show Subject Interface
+    </button>
+  </div> -->
+</div>
+<section>
+  <div class="row parent mt-1">
+
+    <div class="col interface" *ngIf="showParentChildInterface">
+      <div class="form-control">
+        <label for="name" style="color: crimson;">Child One Name Input</label>
+        <input type="text" name="name" id="name" [(ngModel)]="childOneName" placeholder="Add Child One Name Here">
+      </div>
+      <div class="form-control">
+        <label for="name" style="color: green;">Child Two Name Input</label>
+        <input type="text" name="name" id="name" [(ngModel)]="childTwoName" placeholder="Add Child 2 Name Here">
+      </div>
+
+    </div>
+    <!-- <div class="col interface" *ngIf="showSubjectInterface">
+      Subject Interaction
+    </div> -->
+
+    <div class="jumbotron text-center" *ngIf="!showParentChildInterface && !showSubjectInterface">
+      {{message.toUpperCase()}}
+
+      <!-- <button class="btn btn-warning" (click)="showParentChildInterface=true">Show Input</button> -->
+    </div>
+  </div>
+
+</section>
+
+<div class="row">
+  <div class="col">
+    <section>
+      <app-child-one-component [name]="childOneName" (hideParentInput)="hideInputComponent($event)">
+      </app-child-one-component>
+    </section>
+  </div>
+
+  <div class="col">
+    <section>
+      <app-child-two-component [name]="childTwoName" (hideParentInput)="hideInputComponent($event)">
+      </app-child-two-component>
+    </section>
+  </div>
+</div>

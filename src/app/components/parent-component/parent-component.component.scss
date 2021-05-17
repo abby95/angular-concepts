@@ -1,0 +1,31 @@
+.interface {
+  display: block;
+  width: 100vw;
+  // background-color: rgb(196, 196, 196);
+  // padding: 10px;
+  margin: 40px !important;
+}
+
+section {
+  // padding: 10px;
+  // background-color: darkgrey;
+  text-align: center;
+}
+
+.parent {
+  border: 2px dashed darkcyan;
+  background: rgba(0, 139, 139, 0.288);
+  margin: 10px 20px;
+}
+
+.jumbotron {
+  width: 98vw;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.header {
+  color: darkcyan;
+  font-weight: 800;
+  font-size: 20px;
+}

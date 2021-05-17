@@ -1,0 +1,13 @@
+<section>
+  <div class="header">CHILD TWO</div>
+  <div class="inputOutputSection">
+    <div class="form-control">
+      <label for="name">Input From Parent</label>
+      <input type="text" name="name" [(ngModel)]="name" placeholder="Add Child Two Name in Parent">
+    </div>
+  </div>
+
+  <button class="btn btn-success mt-2 btn-block" (click)="hideparent()">
+    Send Data To Parent
+  </button>
+</section>
