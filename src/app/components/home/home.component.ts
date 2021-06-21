@@ -17,7 +17,9 @@ export class HomeComponent implements OnInit {
   ]
 
   rangeMax = 0;
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    sessionStorage.setItem('topic', 'Activated Route')
+  }
 
   ngOnInit(): void {
     var max = this.departments.reduce((a, b) => a.enrolled > b.enrolled ? a : b);

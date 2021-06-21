@@ -9,6 +9,7 @@ import { SubjectComponent } from './components/subject/subject.component';
 import { UiComponentsComponent } from './components/ui-components/ui-components.component';
 import { ComponentInteractionComponent } from './components/component-interaction/component-interaction.component';
 import { HttpInterceptorComponent } from './components/http-interceptor/http-interceptor.component';
+import { RxjsOperatorsComponent } from './components/rxjs-operators/rxjs-operators.component';
 
 const routes: Routes = [
   { path: "", redirectTo: '/home', pathMatch: "full" },
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: "ui-components", component: UiComponentsComponent },
   { path: "component-interaction", component: ComponentInteractionComponent },
   { path: "http-interceptor", component: HttpInterceptorComponent },
-
+  { path: "rxjs-operators", component: RxjsOperatorsComponent },
   { path: "department/:id", component: DepartmentDetailComponent },
 
   // Error ROute

@@ -1,1 +1,83 @@
-Will Update Soon ....
+<div class="card">
+    <div class="card-header">Directive</div>
+    <div class="card-body">
+
+        <span id="Definition">
+            Directives in Angular is used to manipulate DOM Elements.
+        </span>
+        <br>
+        There are 3 types of Directives in Angular
+        <ul>
+            <li><b class="defHeader">Structural Directive:</b> These kind of directives are use to manupulate the DOM by
+                displaying or
+                hiding elements based on a truthy or falsy value =>Conditions
+                <br>
+                Some Examples: *ngFor, *ngIf ,*ngSwitch
+            </li>
+
+            <li>
+                Attribute Directives: This is use to change appearance of the element in the DOM. Some examples:
+                [ngStyle], [ngClass]
+            </li>
+
+            <li>
+                Component Directives: The directives based on components are known as component directives.
+                Each component has @Input and @Output properties. Whenever you try to bind any such properties, you are
+                making use of component directives.
+
+
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+<div class="card mt-2">
+    <div class="card-header">
+        *ngIf Directive -- Structural Directive
+    </div>
+
+    <div class="card-body">
+        <section *ngIf="isVisible">
+            This is visible for Truthy Value
+        </section>
+
+        <section *ngIf="!isVisible">
+            This is visible for Falsy Value
+        </section>
+    </div>
+</div>
+
+
+<div class="card mt-2">
+    <div class="card-header">
+        *ngFor Directive -- Structural Directive
+    </div>
+
+    <div class="card-body">
+        <div class="ribbon" *ngFor="let item of Ribbons">
+            {{item}}
+        </div>
+    </div>
+</div>
+
+<div class="card mt-2">
+    <div class="card-header">
+        *ngSwitch Directive -- Structural Directive
+    </div>
+
+    <div class="card-body">
+
+        ROLE = {{Role}}
+        <div [ngSwitch]="Role">
+
+            <div *ngSwitchCase="'Admin'" class="ribbon">
+                This is Visible if Role = Admin
+            </div>
+            <div *ngSwitchCase="'User'" class="ribbon">
+                This is Visible if Role = User
+            </div>
+        </div>
+
+    </div>
+</div>

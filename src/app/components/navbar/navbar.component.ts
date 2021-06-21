@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  topic: string = "";
+  constructor() {
 
-  constructor() { }
+    // sessionStorage.setItem('topic', 'ACTIVATED ROUTE')
+    this.topic = sessionStorage.getItem('topic');
+  }
 
   ngOnInit(): void {
   }
 
+  setTopic(topic) {
+    sessionStorage.setItem('topic', topic)
+
+  }
 }

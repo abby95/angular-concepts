@@ -2,14 +2,33 @@
   <div class="col-3 BrandName">NG PRACTICE APP</div>
 
   <div class="col text-center">
-    <span id="navLink" routerLink="home" routerLinkActive="active"> ACTIVATED_ROUTE </span>
-    <span id="navLink" routerLink="form" routerLinkActive="active"> TEMPLATE_FORM </span>
-    <span id="navLink" routerLink="reactive-form" routerLinkActive="active"> REACTIVE_FORM </span>
-    <span id="navLink" routerLink="subject" routerLinkActive="active"> SUBJECT </span>
-    <span id="navLink" routerLink="ui-components" routerLinkActive="active"> UI_COMPONENTS </span>
-    <span id="navLink" routerLink="component-interaction" routerLinkActive="active"> COMPONENT_INTERACTION </span>
-    <span id="navLink" routerLink="http-interceptor" routerLinkActive="active"> HTTP-INTERCEPTOR </span>
+    <div class="topic">{{topic}}</div>
   </div>
 
-  <!-- <div class="col-3"></div> -->
+  <div class="col-2"></div>
+  <div class="col-1 menu"><button mat-button [matMenuTriggerFor]="menu">
+      <img src="../../../assets/menu-button-of-three-horizontal-lines.svg" id="menu" alt="">
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="home" id="navLink" routerLinkActive="active"
+        (click)="topic='ACTIVATED ROUTE';setTopic('ACTIVATED ROUTE')">ACTIVATED_ROUTE</button>
+      <button mat-menu-item routerLink="form" id="navLink" routerLinkActive="active"
+        (click)="topic='TEMPLATE DRIVEN FORM' ;setTopic('TEMPLATE_FORM')">TEMPLATE_FORM</button>
+      <button mat-menu-item routerLink="reactive-form" id="navLink" routerLinkActive="active"
+        (click)="topic='REACTIVE FORM';setTopic('REACTIVE_FORM')">REACTIVE_FORM</button>
+      <button mat-menu-item routerLink="subject" id="navLink" routerLinkActive="active"
+        (click)="topic='SUBJECT';setTopic('SUBJECT')">SUBJECT</button>
+      <button mat-menu-item routerLink="ui-components" id="navLink" routerLinkActive="active"
+        (click)="topic='UI COMPONENTS';setTopic('UI_COMPONENTS')">UI_COMPONENTS</button>
+      <button mat-menu-item routerLink="component-interaction" id="navLink" routerLinkActive="active"
+        (click)="topic='COMPONENT INTERACTION';setTopic('COMPONENT INTERACTION')">COMPONENT_INTERACTION</button>
+      <button mat-menu-item routerLink="http-interceptor" id="navLink" routerLinkActive="active"
+        (click)="topic='HTTP INTERCEPTORS';setTopic('HTTP-INTERCEPTOR')">HTTP-INTERCEPTOR
+      </button>
+
+      <button mat-menu-item routerLink="rxjs-operators" id="navLink" routerLinkActive="active"
+        (click)="topic='RXJS OPERATORS';setTopic('RXJS OPERATORS')">RXJS OPERATORS
+      </button>
+    </mat-menu>
+  </div>
 </div>

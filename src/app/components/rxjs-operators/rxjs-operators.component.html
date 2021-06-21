@@ -1,0 +1,70 @@
+<div class="card">
+    <div class="card-header bg-danger text-white">
+        What is RxJS?
+    </div>
+
+    <div class="card-body">
+        <ul>
+            <li>
+                RxJs Stands for Reactive eXtensions for JavaScript
+            </li>
+            <li>RxJS helps in dealing with ASync Data Stream </li>
+            <li class="text-danger">Without RxJS, Dealing with Async Data Stream would have been Tedious. <br /> As Data
+                Streams will emit data at certain interval of time. And each time this Data is emitted, you need to
+                handle this emitted data. <br />Also, the time at which the data will emit is not known. So it would be
+                very
+                difficult to code such data</li>
+            <li>The Async Data Streams are usually known as Observable and the Listener who is listeining to these data
+                streams is known as Observer</li>
+
+            <li>Observable could be anything -> A Function,an Object, a HTTP Response, etc</li>
+            <li>Observer (the Listener) could be anything -> A Function, an Object , etc</li>
+        </ul>
+    </div>
+</div>
+
+<div class="card mt-5">
+    <div class="card-header bg-danger text-white ">
+        IMPLEMENTATION USING A TIMER FUNCTION
+    </div>
+
+    <div class="card-body">
+
+        <ul>
+            <li>Here We have a Timer Function DataStream()<br />- this is not an observable yet... This is just a
+                function
+                that keeps emitting data... we need to convert
+                it to an Observable <br>
+                <hr>
+                <img src="../../../assets/IMG/RxJs-DataStream.png" alt="">
+                <hr>
+            </li>
+            <li>We then create an Observable (observableStream) from the Timer Function as Below: <br>
+                <hr>
+                <img src="../../../assets/IMG/ObservableFromDataStream.png" alt="">
+                <hr>
+            </li>
+
+            <li>
+                we are then subscribing to this observable stream in ngOnInit()
+                <hr>
+                <img src="../../../assets/IMG/SubscribingToRxJsObservable.png" style="width: 100%;" alt="">
+                <hr>
+            </li>
+
+            <li>Complete Code
+
+                <hr>
+                <img src="../../../assets/IMG/RxJs-CompleteCode.png" style="width: 100%;" alt="">
+                <hr>
+            </li>
+
+            <li>Output
+                <hr>
+                <img src="../../../assets/IMG/RxJs-Output.png" style="width: 100%;" alt="">
+                <hr>
+            </li>
+        </ul>
+
+    </div>
+</div>

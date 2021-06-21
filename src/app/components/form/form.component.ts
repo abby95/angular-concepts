@@ -13,7 +13,7 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
   }
   submitForm(form: NgForm) {
-    console.log(form.value)
+    console.log(form)
     this.formValue = JSON.stringify(form.value, null, 2)
   }
 }

@@ -1,54 +1,81 @@
-<form #myForm="ngForm" (ngSubmit)="submitForm(myForm)">
+<!-- <form #PracticeForm="ngForm" (ngSubmit)="submitForm(PracticeForm)">
 
-  <div class="text-center text-secondary ">
-    <b>TEMPLATE DRIVEN FORM</b>
-  </div>
   <div class="form-control">
-    <label for="name">Name </label>
-    <input type="text" name="name" id="name" placeholder="Enter Name Here. . . " ngModel>
-  </div>
-  <div class="form-control">
-    <label for="age">Age </label>
-    <input type="number" name="age" id="age" placeholder="Enter Age Here. . . " ngModel required>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" ngModel>
   </div>
 
   <div class="form-control">
-    <p style="font-weight: 800;">Select your gender</p>
-    <div class="row">
-      <div class="col">
-        Male
-        <input type="radio" name="gender" value="male" id="gender" ngModel>
-      </div>
-      <div class="col">
-        Female
-        <input type="radio" name="gender" value="female" id="gender" ngModel>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="form-control">
-    <label for="profession">Profession</label>
-
-    <select name="profession" id="profession" ngModel>
-
-      <option value="Teacher">Teacher</option>
-      <option value="Actor">Actor</option>
-      <option value="Coder">Coder</option>
-      <option value="Doctor">Doctor</option>
-      <option value="Biker">Biker</option>
-
+    <select name="skill" id="skill" ngModel>
+      <option value="Angular">Angular</option>
+      <option value="Node">Node</option>
+      <option value="React">React</option>
     </select>
   </div>
 
   <button class="btn-block btn-primary" type="submit">SUBMIT</button>
-</form>
+</form> -->
+
+
+<!-- PRACTICE -->
 
 
 
-<div class="card mt-4">
-  <div class="card-header bg-danger  text-white">OUTPUT</div>
-  <div class="card-body">
-    {{formValue}}
+<div class="row">
+  <div class="col-8">
+    <form #myForm="ngForm" (ngSubmit)="submitForm(myForm)">
+
+      <div class="text-center text-secondary ">
+        <b>TEMPLATE DRIVEN FORM</b>
+      </div>
+      <div class="form-control">
+        <label for="name">Name </label>
+        <input type="text" name="name" id="name" placeholder="Enter Name Here. . . " ngModel>
+      </div>
+      <div class="form-control">
+        <label for="age">Age </label>
+        <input type="number" name="age" id="age" placeholder="Enter Age Here. . . " ngModel required>
+      </div>
+
+      <div class="form-control">
+        <p style="font-weight: 800;">Select your gender</p>
+        <div class="row">
+          <div class="col">
+            Male
+            <input type="radio" name="gender" value="male" id="gender" ngModel>
+          </div>
+          <div class="col">
+            Female
+            <input type="radio" name="gender" value="female" id="gender" ngModel>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="form-control">
+        <label for="profession">Profession</label>
+
+        <select name="profession" id="profession" ngModel>
+
+          <option value="Teacher">Teacher</option>
+          <option value="Actor">Actor</option>
+          <option value="Coder">Coder</option>
+          <option value="Doctor">Doctor</option>
+          <option value="Biker">Biker</option>
+
+        </select>
+      </div>
+
+      <button class="btn-block btn-primary" type="submit">SUBMIT</button>
+    </form>
+  </div>
+
+  <div class="col output">
+    <div class="card mt-4">
+      <div class="card-header bg-danger  text-white">OUTPUT</div>
+      <div class="card-body">
+        {{formValue}}
+      </div>
+    </div>
   </div>
 </div>

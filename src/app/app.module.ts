@@ -2,10 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms"
 import { AppRoutingModule } from './app-routing.module';
-
+import { MatMenuModule } from '@angular/material/menu';
 import { httpInterceptorProviders } from "./http-interceptors/index"
-
-import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -26,6 +26,8 @@ import { SubjectEmitterComponent } from './components/subject-components/subject
 import { SubjectObserverOneComponent } from './components/subject-components/subject-observer-one/subject-observer-one.component';
 import { SubjectObserverTwoComponent } from './components/subject-components/subject-observer-two/subject-observer-two.component';
 import { HttpInterceptorComponent } from './components/http-interceptor/http-interceptor.component';
+import { GlobalErrorInterceptorService } from './http-interceptors/global-error-interceptor.service';
+import { RxjsOperatorsComponent } from './components/rxjs-operators/rxjs-operators.component';
 
 @NgModule({
   declarations: [
@@ -46,15 +48,25 @@ import { HttpInterceptorComponent } from './components/http-interceptor/http-int
     SubjectObserverOneComponent,
     SubjectObserverTwoComponent,
     HttpInterceptorComponent,
+    RxjsOperatorsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule,
+    MatButtonModule
   ],
-  providers: [httpInterceptorProviders],
+  providers: [httpInterceptorProviders,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: GlobalErrorInterceptorService,
+      multi: true
+    }
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
